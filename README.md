@@ -1,16 +1,15 @@
-## Hi there 👋
+# Secure Messaging Application using NTRU and Salsa20
 
-<!--
-**dnachat/dnachat** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Project Overview
 
-Here are some ideas to get you started:
+This project is a Python-based secure messaging application that uses post-quantum encryption techniques to facilitate private communication between clients over a central server. The server acts solely as a message-forwarding node, ensuring that messages remain private and secure from eavesdropping, even on the server itself.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### Technologies and Cryptographic Techniques
+
+This application leverages the following cryptographic protocols and algorithms for secure communication:
+
+- **NTRU (N-th Degree Truncated Polynomial Ring Units)**: A post-quantum public-key encryption algorithm used for secure key exchange. NTRU ensures that the shared secret established between clients remains secure against potential quantum computing attacks.
+  
+- **Salsa20**: A fast and secure stream cipher used for encrypting messages after a shared secret is established. Salsa20 provides high-speed encryption and is well-suited for real-time messaging applications.
+  
+- **Ed25519**: A digital signature algorithm used to sign messages, guaranteeing message integrity and authenticity. Ed25519 ensures that any message tampering is detectable by the recipient.
